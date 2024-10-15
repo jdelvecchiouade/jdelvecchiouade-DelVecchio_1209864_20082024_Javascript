@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenida</title>
+    <script>
+      let nombre = prompt("¿Cuál es tu nombre?");
+      let edad = prompt("¿Cuántos años tenes?");
+      let ciudad = prompt("¿De qué ciudad sos?");
+      let fechaNacimiento = prompt(
+        "¿Cuál es tu fecha de nacimiento? (Formato: AAAA-MM-DD)"
+      );
+
+      let hoy = new Date();
+      let nacimiento = new Date(fechaNacimiento);
+      let diferencia = hoy - nacimiento;
+      let diasVividos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      alert(`¡Bienvenido, ${nombre}! Tenes ${edad} años y sos de ${ciudad}.`);
+      alert(`Viviste ${diasVividos} días desde que naciste.`);
+    </script>
+  </head>
+  <body></body>
+</html>
